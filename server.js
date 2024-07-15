@@ -46,6 +46,10 @@ app.post("/api/create-payment-intent", async (req, res) => {
   res.json({ sessionId: session.id });
 });
 
+app.get("/api/success", (req, res) => {
+  res.send("Payment successful");
+});
+
 // Define the port to listen on, defaulting to 3001 if not specified in environment variables
 const PORT = process.env.PORT || 3001;
 // Start the server
